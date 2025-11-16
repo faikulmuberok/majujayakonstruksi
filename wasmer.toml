@@ -1,0 +1,26 @@
+[package]
+name = "laravel-app"
+version = "0.1.0"
+description = "Laravel Application"
+
+[fs]
+"public" = "/app/public"
+"bootstrap/cache" = "/app/bootstrap/cache"
+"storage" = "/app/storage"
+
+[build]
+command = "composer install --optimize-autoloader --no-dev"
+
+[command]
+run = "php artisan serve --host=0.0.0.0 --port=8000"
+
+[environment]
+APP_ENV = "production"
+APP_DEBUG = "false"
+APP_KEY = "base64:Kqc4v8Xq4+GlQe3IHYFXML2JXbsJ1VUUfsKgwqOw+po="
+APP_URL = "majujayakonstruksi.com"
+
+[volumes]
+"/app/storage" = "storage"
+
+timeout = 60
